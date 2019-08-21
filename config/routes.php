@@ -40,7 +40,6 @@ return [
             'api/backend/v1/role',
             'api/backend/v1/my/sessions' => 'api/backend/v1/my-session',
             'api/backend/v1/setting',
-            'api/backend/v1/ticket',
         ],
         'tokens' => [
             '{id}' => '<id:[\\w\-\.]+>',
