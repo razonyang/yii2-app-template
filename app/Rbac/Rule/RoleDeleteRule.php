@@ -1,9 +1,9 @@
 <?php
 namespace App\Rbac\Rule;
 
+use Yii;
 use yii\rbac\Rule;
 use yii\web\ForbiddenHttpException;
-use Yii;
 
 class RoleDeleteRule extends Rule
 {

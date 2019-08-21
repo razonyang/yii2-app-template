@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Api\Backend\Model;
 
-use yii\rbac\Item;
 use Yii;
+use yii\rbac\Item;
 use yii\validators\ExistValidator;
 
 class Role extends AuthItem

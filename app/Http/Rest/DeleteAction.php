@@ -2,9 +2,9 @@
 namespace App\Http\Rest;
 
 use App\Model\SoftDeleteInterface;
+use Yii;
 use yii\db\ActiveRecord;
 use yii\rest\DeleteAction as Action;
-use Yii;
 
 class DeleteAction extends Action
 {

@@ -1,10 +1,9 @@
 <?php
 namespace App\Console\Controller;
 
-use yii\console\Controller as BaseController;
-use yii\helpers\VarDumper;
-use yii\log\Logger;
 use Yii;
+use yii\console\Controller as BaseController;
+use yii\log\Logger;
 
 class Controller extends BaseController
 {

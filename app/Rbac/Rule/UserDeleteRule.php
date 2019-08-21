@@ -2,9 +2,9 @@
 namespace App\Rbac\Rule;
 
 use App\Model\User;
+use Yii;
 use yii\rbac\Rule;
 use yii\web\ForbiddenHttpException;
-use Yii;
 
 class UserDeleteRule extends Rule
 {

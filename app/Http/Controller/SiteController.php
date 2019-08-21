@@ -1,10 +1,10 @@
 <?php
 namespace App\Http\Controller;
 
+use Yii;
 use yii\captcha\CaptchaAction;
 use yii\web\Controller;
 use yii\web\ErrorAction;
-use Yii;
 
 class SiteController extends Controller
 {

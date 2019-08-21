@@ -2,8 +2,8 @@
 namespace App\Http\Api\Backend\Controller;
 
 use App\Http\Form\UploadForm;
-use yii\web\UploadedFile;
 use Yii;
+use yii\web\UploadedFile;
 
 class UploadController extends Controller
 {

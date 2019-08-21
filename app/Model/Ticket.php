@@ -3,7 +3,6 @@
 namespace App\Model;
 
 use App\Db\TimestampBehavior;
-use Ramsey\Uuid\Uuid;
 use Yii;
 
 /**

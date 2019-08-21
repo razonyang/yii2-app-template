@@ -2,8 +2,8 @@
 namespace App\Http\Api\Frontend\Controller;
 
 use App\Http\Api\Model\Article;
-use yii\base\DynamicModel;
 use App\Model\StatusInterface;
+use yii\base\DynamicModel;
 
 class ArticleController extends ActiveController
 {

@@ -3,8 +3,8 @@ namespace App\Factory;
 
 use App\Model\Session;
 use Ramsey\Uuid\Uuid;
-use yii\web\Request;
 use Yii;
+use yii\web\Request;
 
 class SessionFactory
 {

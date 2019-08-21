@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Rest;
 
-use yii\rest\OptionsAction as BaseOptionsAction;
 use Yii;
+use yii\rest\OptionsAction as BaseOptionsAction;
 
 class OptionsAction extends BaseOptionsAction
 {

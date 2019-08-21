@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Api\Backend\Controller;
 
-use Yii;
 use App\Http\Api\Backend\Model\Session;
+use Yii;
 
 class MySessionController extends SessionController
 {

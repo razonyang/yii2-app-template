@@ -1,9 +1,9 @@
 <?php
 namespace App\Db;
 
+use App\Model\StatusInterface;
 use yii\db\Migration as BaseMigration;
 use yii\db\ColumnSchemaBuilder;
-use App\Model\StatusInterface;
 
 class Migration extends BaseMigration
 {

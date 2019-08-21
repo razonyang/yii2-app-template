@@ -1,11 +1,11 @@
 <?php
 namespace App\Http\Filter;
 
+use Yii;
+use yii\di\Instance;
 use yii\filters\ContentNegotiator as BaseContentNegotiator;
 use yii\web\User;
-use yii\di\Instance;
 use yii\web\Cookie;
-use Yii;
 
 class ContentNegotiator extends BaseContentNegotiator
 {

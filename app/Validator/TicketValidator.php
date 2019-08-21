@@ -1,8 +1,8 @@
 <?php
 namespace App\Validator;
 
-use yii\validators\ExistValidator;
 use App\Model\Ticket;
+use yii\validators\ExistValidator;
 
 class TicketValidator extends ExistValidator
 {

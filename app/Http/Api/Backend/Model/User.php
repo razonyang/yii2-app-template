@@ -2,8 +2,8 @@
 namespace App\Http\Api\Backend\Model;
 
 use App\Model\User as BaseUser;
-use yii\helpers\ArrayHelper;
 use Yii;
+use yii\helpers\ArrayHelper;
 
 class User extends BaseUser
 {

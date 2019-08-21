@@ -2,8 +2,8 @@
 namespace App\Http\Rest;
 
 use RazonYang\Yii2\JSend\Serializer as BaseSerializer;
-use yii\web\Link;
 use Yii;
+use yii\web\Link;
 
 class Serializer extends BaseSerializer
 {

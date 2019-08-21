@@ -2,8 +2,8 @@
 namespace App\Http\Api\Backend\Controller;
 
 use App\Http\Api\Backend\Model\Setting;
-use yii\base\DynamicModel;
 use Yii;
+use yii\base\DynamicModel;
 
 class SettingController extends ActiveController
 {

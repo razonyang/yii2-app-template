@@ -1,11 +1,11 @@
 <?php
 namespace App\Gii\Generator\Module;
 
+use Yii;
 use yii\gii\generators\module\Generator as BaseGenerator;
 use yii\gii\CodeFile;
 use yii\helpers\Html;
 use yii\helpers\StringHelper;
-use Yii;
 
 class Generator extends BaseGenerator
 {

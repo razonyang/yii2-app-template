@@ -4,11 +4,11 @@ namespace App\Http\Api\Frontend\Controller;
 use App\Http\Filter\Auth\Authenticator;
 use App\Http\Filter\RateLimit\RateLimiter;
 use App\Http\Filter\RateLimit\Redis\RedisRateLimitFallbackUser;
+use Yii;
+use yii\filters\Cors;
 use yii\filters\VerbFilter;
-use yii\filters\{Cors};
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\auth\QueryParamAuth;
-use Yii;
 
 trait ControllerTrait
 {

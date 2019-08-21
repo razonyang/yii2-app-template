@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Api\Backend\Controller;
 
-use yii\rbac\Item;
 use App\Http\Api\Backend\Model\Role;
+use yii\rbac\Item;
 
 class RoleController extends AuthItemController
 {

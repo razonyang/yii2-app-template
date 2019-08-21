@@ -1,10 +1,10 @@
 <?php
 namespace App\Model;
 
-use yii\behaviors\OptimisticLockBehavior;
 use App\Db\TimestampBehavior;
 use App\Validator\UrlValidator;
 use Yii;
+use yii\behaviors\OptimisticLockBehavior;
 
 /**
  * This is the model class for table "{{%article}}".

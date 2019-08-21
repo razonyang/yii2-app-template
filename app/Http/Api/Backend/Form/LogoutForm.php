@@ -3,8 +3,8 @@ namespace App\Http\Api\Backend\Form;
 
 use App\Form\Form;
 use App\Htpp\User\LogoutInterface;
-use yii\web\IdentityInterface;
 use Yii;
+use yii\web\IdentityInterface;
 
 class LogoutForm extends Form
 {

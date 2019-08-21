@@ -4,8 +4,8 @@ namespace App\Model;
 use App\Db\TimestampBehavior;
 use App\Http\Filter\LanguagePickerInterface;
 use App\Http\User\LogoutInterface;
-use yii\web\IdentityInterface;
 use Yii;
+use yii\web\IdentityInterface;
 
 /**
  * User model

@@ -1,8 +1,8 @@
 <?php
 namespace App\Model;
 
-use yii\behaviors\TimestampBehavior;
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "{{%auth_item}}".

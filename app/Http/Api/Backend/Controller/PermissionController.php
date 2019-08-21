@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Api\Backend\Controller;
 
-use yii\rbac\Item;
 use App\Http\Api\Backend\Model\Permission;
+use yii\rbac\Item;
 
 class PermissionController extends AuthItemController
 {
