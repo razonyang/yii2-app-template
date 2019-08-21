@@ -23,5 +23,12 @@ return [
             'database' => 0,
             // 'password' => '',
         ],
+        'uploader' => [
+            'host' => 'http://localhost:8080/resources',
+            'filesystem' => [
+                'class' => \creocoder\flysystem\LocalFilesystem::class,
+                'path' => '@webroot/resources',
+            ],
+        ],
     ],
 ];
