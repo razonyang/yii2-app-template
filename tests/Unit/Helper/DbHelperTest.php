@@ -20,8 +20,9 @@ class DbHelperTest extends Unit
     public function dataTransaction(): array
     {
         return [
-            [function() {}, [], true],
-            [function() {
+            [function () {
+            }, [], true],
+            [function () {
                 throw new \Exception('fail');
             }, [], false],
         ];

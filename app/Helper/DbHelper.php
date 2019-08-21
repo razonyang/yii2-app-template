@@ -8,12 +8,12 @@ class DbHelper
 {
     /**
      * Commits transaction when successed, otherwise rollbacks transaction and rethrow exception.
-     * 
+     *
      * @param \Closure       $callback
      * @param array          $parameters
      * @param null|onnection $db
      * @param null|string    $isolationLevel
-     * 
+     *
      * @throws \Throwable
      */
     public static function transaction(\Closure $callback, array $parameters = [], ?Connection $db = null, ?string $isolationLevel = null)
