@@ -16,5 +16,10 @@ coverage:
     enabled: true
     remote: false
     include:
-        - app/*
+        - app/Console/Job/*
+        - app/Db/*
+        - app/Job/*
+        - app/Queue/*
+        - app/Rbac/*
+        - app/Validator/*
     exclude:
