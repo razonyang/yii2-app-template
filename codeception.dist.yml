@@ -16,7 +16,5 @@ coverage:
     enabled: true
     remote: false
     include:
-        - app/Form/*
-        - app/Job/*
-        - app/Factory/*
-        - app/Validator/*
+        - app/*
+    exclude:
