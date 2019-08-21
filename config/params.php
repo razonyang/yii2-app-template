@@ -9,9 +9,6 @@ return [
     'user.session.refreshTokenDuration' => 403200, // refresh token's duration in seconds, default to a week.
     'user.session.durationAfterRefresh' => 300, // old session's remaining durantion after refreshing session, default to 5 minutes.
 
-    // uploader
-    'uploader.host' => 'http://localhost/resources',
-
     /* =============================== API =============================== */
     // CORS
     'api.cors.origin' => ['*'],

@@ -60,7 +60,7 @@ return [
                 'file' => [
                     'class' => 'yii\log\FileTarget',
                     'logFile' => '@runtime/logs/web.log',
-                    'levels' => YII_DEBUG ? ['error', 'warning', 'info', 'trace'] : ['error', 'warning'],
+                    'levels' => ['error', 'warning'],
                 ],
             ],
         ],

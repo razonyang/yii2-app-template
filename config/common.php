@@ -5,11 +5,6 @@ $params = array_merge(
     require __DIR__ . '/params-local.php'
 );
 
-$env = array_merge(
-    require __DIR__ . '/env.php',
-    require __DIR__ . '/env-local.php'
-);
-
 $root = dirname(__DIR__);
 
 return [
@@ -35,11 +30,11 @@ return [
         ],
         'db' => [
             'class' => \yii\db\Connection::class,
-            'dsn' => $env['db.dsn'],
-            'username' => $env['db.username'],
-            'password' => $env['db.password'],
-            'charset' => $env['db.charset'],
-            'tablePrefix' => $env['db.tablePrefix'],
+            'dsn' => 'mysql:host=localhost;dbname=yii',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8mb4',
+            'tablePrefix' => 't_',
             'enableSchemaCache' => YII_DEBUG ? false : true,
         ],
         'log' => [
@@ -59,16 +54,15 @@ return [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => $env['mailer.useFileTransport'],
+            'useFileTransport' => YII_DEBUG ? true : false,
             'transport' => [
                 'class' => \Swift_SmtpTransport::class,
-                'host' => $env['mailer.host'],
-                'port' => $env['mailer.port'],
-                'encryption' => $env['mailer.encryption'],
-                'username' => $env['mailer.username'],
-                'password' => $env['mailer.password'],
+                'host' => 'smtp.example.com',
+                'port' => 25,
+                'encryption' => 'ssl',
+                'username' => 'admin@example.com',
+                'password' => '',
             ],
-            'setting' => 'settingManager',
         ],
         'i18n' => [
             'translations' => [
@@ -84,10 +78,10 @@ return [
         ],
         'redis' => [
             'class' => \yii\redis\Connection::class,
-            'hostname' => $env['redis.hostname'],
-            'port' => $env['redis.port'],
-            'database' => $env['redis.database'],
-            'password' => $env['redis.password'],
+            'hostname' => 'localhost',
+            'port' => 6379,
+            'database' => 0,
+            // 'password' => '',
         ],
         'mutex' => [
             'class' => \yii\redis\Mutex::class,
@@ -113,7 +107,7 @@ return [
         ],
         'uploader' => [
             'class' => \RazonYang\Yii2\Uploader\Uploader::class,
-            'host' => $params['uploader.host'],
+            'host' => 'http://localhost/resources',
             'filesystem' => [
                 'class' => \creocoder\flysystem\LocalFilesystem::class,
                 'path' => '@webroot/resources',

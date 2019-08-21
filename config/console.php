@@ -35,7 +35,7 @@ return [
                 'file' => [
                     'class' => yii\log\FileTarget::class,
                     'logFile' => '@runtime/logs/console.log',
-                    'levels' => YII_DEBUG ? ['error', 'warning', 'info', 'trace'] : ['error', 'warning'],
+                    'levels' => ['error', 'warning'],
                 ],
             ],
         ],
