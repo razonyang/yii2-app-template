@@ -12,7 +12,6 @@ return [
     'redis.hostname' => 'localhost',
     'redis.port' => 6379,
     'redis.database' => 0,
-    'redis.password' => '',
 
     // mailer
     'mailer.useFileTransport' => false,
