@@ -11,7 +11,7 @@ class DbHelper
      *
      * @param \Closure       $callback
      * @param array          $parameters
-     * @param null|onnection $db
+     * @param null|onnection $db             Yii::$app->getDb() will be used if no specified.
      * @param null|string    $isolationLevel
      *
      * @throws \Throwable
