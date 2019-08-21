@@ -1,0 +1,9 @@
+path: Functional
+actor: FunctionalTester
+modules:
+    enabled:
+        # add a framework module here
+        - \Helper\Functional
+        - Yii2:
+            configFile: "tests/config.php"
+    step_decorators: ~        

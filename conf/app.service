@@ -1,0 +1,25 @@
+[Unit]
+Description=App Docker Compose Service
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+
+WorkingDirectory=/app
+
+# Remove old containers, images and volumes
+ExecStartPre=/usr/bin/docker-compose down -v
+ExecStartPre=/usr/bin/docker-compose rm -v
+ExecStartPre=-/bin/bash -c 'docker volume rm $(docker volume ls -q)'
+ExecStartPre=-/bin/bash -c 'docker rmi $(docker images | grep "<none>" | awk \'{print $3}\')'
+ExecStartPre=-/bin/bash -c 'docker rm -v $(docker ps -aq)'
+
+# Compose up
+ExecStart=/usr/bin/docker-compose up --scale queue=5
+
+# Compose down, remove containers and volumes
+ExecStop=/usr/bin/docker-compose down -v
+
+[Install]
+WantedBy=multi-user.target

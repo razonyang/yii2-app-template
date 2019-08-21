@@ -1,0 +1,4 @@
+* * * * * /usr/local/bin/php /app/bin/yii hello   # for testing
+* * * * * /usr/local/bin/php /app/bin/yii hello razon  # for testing
+
+0 0 * * * /usr/bin/php /app/bin/yii gc/session            # flush expired sessions

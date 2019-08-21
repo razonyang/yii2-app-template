@@ -1,0 +1,63 @@
+{
+    "name": "razonyang/yii2-app-template",
+    "description": "Yii2 App Project Template",
+    "keywords": ["yii2", "framework", "advanced", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.1",
+        "ext-mbstring": "*",
+        "ramsey/uuid": "^3.8",
+        "razonyang/yii2-jsend": "^1.0",
+        "razonyang/yii2-log-target-db": "^1.0",
+        "razonyang/yii2-rate-limiter": "^1.0",
+        "razonyang/yii2-setting": "^1.0",
+        "razonyang/yii2-uploader": "^1.0",
+        "yiisoft/yii2": "~2.0.23",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-queue": "^2.2",
+        "yiisoft/yii2-redis": "^2.0",
+        "yiisoft/yii2-swiftmailer": "~2.1.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^3.0",
+        "codeception/verify": "^1.1",
+        "phpunit/phpunit": "^7",
+        "facebook/webdriver": "^1.7",
+        "symfony/browser-kit": ">=2.7 <=4.2.4",
+        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-gii": "~2.1.0"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests"
+        }
+    }
+}

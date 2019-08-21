@@ -1,0 +1,13 @@
+path: Acceptance
+actor: AcceptanceTester
+modules:
+    enabled:
+        - PhpBrowser:
+            url: http://localhost:8080
+        - \Helper\Acceptance
+        - Yii2:
+            configFile: "tests/config.php"
+            part: init
+    step_decorators: ~
+coverage:
+    enabled: false

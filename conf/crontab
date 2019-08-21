@@ -1,0 +1,5 @@
+# crond jobs
+
+* * * * * /usr/local/bin/php /app/bin/yii hello   # for testing
+
+0 0 * * * /usr/bin/php /app/bin/yii gc/session            # flush expired sessions

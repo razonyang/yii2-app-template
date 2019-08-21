@@ -1,0 +1,18 @@
+# systemd service unit
+
+[Unit]
+Description=App Queue Worker %I
+After=network.target
+# the following two lines only apply if your queue backend is mysql
+# replace this with the service that powers your backend
+After=mysql.service
+Requires=mysql.service
+
+[Service]
+#User=nginx
+#Group=nginx
+ExecStart=/usr/bin/php /app/bin/yii queue/listen --verbose
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
