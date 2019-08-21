@@ -6,7 +6,21 @@ use yii\validators\Validator;
 
 class UrlValidator extends Validator
 {
+    public const COMPONENT_SCHEME = 'scheme';
+    public const COMPONENT_HOST = 'host';
+    public const COMPONENT_PORT = 'port';
+    public const COMPONENT_USER = 'user';
+    public const COMPONENT_PASS = 'pass';
+    public const COMPONENT_PATH = 'path';
+    public const COMPONENT_QUERY = 'query';
+    public const COMPONENT_FRAGMENT = 'fragment';
+
     public $schemes = ['http', 'https'];
+
+    public $components = [
+        self::COMPONENT_SCHEME,
+        self::COMPONENT_HOST,
+    ];
 
     public function init()
     {
@@ -19,9 +33,14 @@ class UrlValidator extends Validator
     
     protected function validateValue($value)
     {
-        $url = parse_url($value);
+        $components = parse_url($value);
+        foreach ($this->components as $name) {
+            if (!isset($components[$name])) {
+                return [$this->message, []];
+            }
+        }
 
-        if (!isset($url['scheme'], $url['host']) || !in_array($url['scheme'], $this->schemes)) {
+        if (!in_array($components[self::COMPONENT_SCHEME], $this->schemes)) {
             return [$this->message, []];
         }
 

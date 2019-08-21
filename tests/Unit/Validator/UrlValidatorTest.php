@@ -29,6 +29,7 @@ class UrlValidatorTest extends Unit
             ['http://localhost', true],
             ['http://localhost:8080', true],
             ['localhost:8080', false],
+            ['ftp://localhost:8080', false],
         ];
     }
 }
