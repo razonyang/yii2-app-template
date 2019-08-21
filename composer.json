@@ -18,7 +18,7 @@
         "php": ">=7.1",
         "ext-mbstring": "*",
         "ramsey/uuid": "^3.8",
-        "razonyang/yii2-jsend": "^1.0",
+        "razonyang/yii2-jsend": "^1.0.1",
         "razonyang/yii2-log-target-db": "^1.0",
         "razonyang/yii2-rate-limiter": "^1.0",
         "razonyang/yii2-setting": "^1.0",
