@@ -22,6 +22,7 @@ class Article extends BaseArticle
     public function extraFields()
     {
         return [
+            'version',
             'content',
         ];
     }

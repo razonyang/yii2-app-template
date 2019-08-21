@@ -21,6 +21,7 @@ class m190731_024219_table_article extends Migration
             'release_time' => $this->timestamp('Release Time'),
             'status' => $this->status(),
             'is_deleted' => $this->softDelete(),
+            'version' => $this->optimisticLock(),
             'create_time' => $this->createTimestamp(),
             'update_time' => $this->updateTimestamp(),
         ], $this->tableOptions());

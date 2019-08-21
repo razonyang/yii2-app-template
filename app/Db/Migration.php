@@ -76,4 +76,9 @@ class Migration extends BaseMigration
     {
         return $this->string($length)->notNull()->defaultValue('')->comment($comment);
     }
+
+    public function optimisticLock(): ColumnSchemaBuilder
+    {
+        return $this->bigInteger()->notNull()->defaultValue(0)->comment('Optimistic Lock');
+    }
 }

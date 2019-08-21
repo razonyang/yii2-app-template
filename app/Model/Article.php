@@ -1,6 +1,7 @@
 <?php
 namespace App\Model;
 
+use yii\behaviors\OptimisticLockBehavior;
 use App\Db\TimestampBehavior;
 use App\Validator\UrlValidator;
 use Yii;
@@ -37,7 +38,13 @@ class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterfa
     {
         return [
             TimestampBehavior::class,
+            OptimisticLockBehavior::class,
         ];
+    }
+    
+    public function optimisticLock()
+    {
+        return 'version';
     }
 
     /**
