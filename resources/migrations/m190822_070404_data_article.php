@@ -28,7 +28,7 @@ class m190822_070404_data_article extends Migration
 
         $this->insert($this->metaTableName, [
             'article_id' => 1,
-            'content' => '<h1>Congratulation!</h1><p>You have set up Yii2 and Vue application.</p>',
+            'content' => '<p><strong>Congratulation!</strong> You have set up Yii2 and Vue application.</p>',
         ]);
     }
 
