@@ -3,6 +3,8 @@
 return [
     'About Us' => '关于我们',
 
+    'Article' => '文章',
+
     'Contact Us' => '联系我们',
 
     'Description' => '描述',
