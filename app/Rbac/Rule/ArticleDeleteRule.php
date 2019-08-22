@@ -10,6 +10,6 @@ class ArticleDeleteRule extends Rule
 
     public function execute($user, $item, $params)
     {
-        return isset($params['model']) && $user != $params['model']->user_id ? true : false;
+        return isset($params['model']) ? $user == $params['model']->user_id : false;
     }
 }
