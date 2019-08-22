@@ -40,6 +40,7 @@ AppAsset::register($this);
         ['label' => Yii::t('app', 'Article'), 'url' => ['/article/index']],
         ['label' => Yii::t('app', 'About Us'), 'url' => ['/site/about']],
         ['label' => Yii::t('app', 'Contact Us'), 'url' => ['/site/contact']],
+        ['label' => Yii::t('app', 'Console'), 'url' => Yii::$app->params['backend.url'], 'linkOptions' => ['target' => '_blank']],
     ];
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

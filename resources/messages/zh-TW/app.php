@@ -2,9 +2,9 @@
 
 return [
     'About Us' => '關於我們',
-
     'Article' => '文章',
 
+    'Console' => '控制臺',
     'Contact Us' => '聯系我們',
 
     'Description' => '描述',

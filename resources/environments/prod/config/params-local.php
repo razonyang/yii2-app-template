@@ -4,4 +4,6 @@ return [
 
     // uploader
     'uploader.host' => 'http://localhost:8080/resources',
+    
+    'backend.url' => '',
 ];
