@@ -18,9 +18,9 @@ class Serializer extends BaseSerializer
         return [
             $this->linksEnvelope => Link::serialize($pagination->getLinks(true)),
             $this->metaEnvelope => [
+                'limit' => $pagination->getPageSize(),
                 'page' => $pagination->getPage() + 1,
                 'page_count' => $pagination->getPageCount(),
-                'page_size' => $pagination->getPageSize(),
                 'total_count' => $pagination->totalCount,
             ],
         ];
