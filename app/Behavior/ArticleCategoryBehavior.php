@@ -5,6 +5,7 @@ use App\Model\Article;
 use App\Model\ArticleCategory;
 use yii\base\Behavior;
 use yii\base\Event;
+use yii\web\ForbiddenHttpException;
 
 class ArticleCategoryBehavior extends Behavior
 {
@@ -26,7 +27,7 @@ class ArticleCategoryBehavior extends Behavior
             ])
             ->count();
         if ($count > 0) {
-            throw new \Exception('Unable to delete category since there are articles belong to it');
+            throw new ForbiddenHttpException('Unable to delete category since there are articles belong to it');
         }
     }
 }
