@@ -8,7 +8,7 @@ $this->title = $model->title;
 
 <h1>
     <?= Html::encode($model->title) ?>
-    <small class="text-muted"><?= Html::encode($model->category->name ?? '') ?></small>
+    <small class="text-muted badge"><?= Html::encode($model->category->name ?? '') ?></small>
 </h1>
 
 <hr>
