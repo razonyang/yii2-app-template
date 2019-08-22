@@ -22,9 +22,9 @@ class ArticleController extends ActiveController
 
     public function searchModel()
     {
-        return (new DynamicModel(['id' => '', 'title' => '', 'author' => '', 'summary' => '', 'status' => '']))
+        return (new DynamicModel(['id' => '', 'title' => '', 'author' => '', 'summary' => '', 'status' => '', 'category_id' => '']))
             ->addRule(['title', 'author', 'summary'], 'string')
-            ->addRule(['id', 'status'], 'number');
+            ->addRule(['id', 'status', 'category_id'], 'number');
     }
 
     protected function applyFilter($query, $model, $filter)
@@ -34,7 +34,7 @@ class ArticleController extends ActiveController
                 $query->andWhere(['LIKE', 'a.' . $name, $model->$name]);
             }
         }
-        foreach (['id', 'status'] as $name) {
+        foreach (['id', 'status', 'category_id'] as $name) {
             if (is_numeric($model->$name)) {
                 $query->andWhere(['a.' . $name => $model->$name]);
             }
