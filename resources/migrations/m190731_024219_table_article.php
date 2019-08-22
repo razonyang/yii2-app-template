@@ -17,7 +17,6 @@ class m190731_024219_table_article extends Migration
             'author' => $this->string()->notNull()->defaultValue('')->comment('Author'),
             'summary' => $this->string()->notNull()->comment('Summary'),
             'cover' => $this->string()->notNull()->comment('Cover'),
-            'content' => $this->text()->notNull()->comment('Content'),
             'release_time' => $this->timestamp('Release Time'),
             'status' => $this->status(),
             'is_deleted' => $this->softDelete(),

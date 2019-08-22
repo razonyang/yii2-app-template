@@ -23,7 +23,9 @@ class Article extends BaseArticle
     {
         return [
             'version',
-            'content',
+            'content' => function ($model) {
+                return $model->meta->content ?? '';
+            },
         ];
     }
 }

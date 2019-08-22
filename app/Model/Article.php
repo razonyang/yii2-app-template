@@ -1,7 +1,9 @@
 <?php
 namespace App\Model;
 
+use App\Behavior\ArticleBehavior;
 use App\Db\TimestampBehavior;
+use App\Factory\ArticleMetaFactory;
 use App\Validator\UrlValidator;
 use Yii;
 use yii\behaviors\OptimisticLockBehavior;
@@ -13,7 +15,6 @@ use yii\behaviors\OptimisticLockBehavior;
  * @property int $user_id User ID
  * @property string $title Title
  * @property string $summary Description
- * @property string $content Content
  * @property string $author Author
  * @property string $cover Cover
  * @property int $release_time Release Time
@@ -21,10 +22,14 @@ use yii\behaviors\OptimisticLockBehavior;
  * @property int $is_deleted Is Deleted
  * @property int $create_time Create Time
  * @property int $update_time Update Time
+ * 
+ * @property ArticleMeta $meta
  */
 class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterface
 {
     use SoftDeleteTrait, StatusTrait;
+
+    public $content;
 
     /**
      * {@inheritdoc}
@@ -39,6 +44,7 @@ class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterfa
         return [
             TimestampBehavior::class,
             OptimisticLockBehavior::class,
+            ArticleBehavior::class,
         ];
     }
     
@@ -81,5 +87,10 @@ class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterfa
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),
         ];
+    }
+
+    public function getMeta()
+    {
+        return $this->hasOne(ArticleMeta::class, ['article_id' => 'id']);
     }
 }
