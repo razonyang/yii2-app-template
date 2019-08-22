@@ -84,7 +84,5 @@ class m190725_110548_setting_init extends Migration
     public function safeDown()
     {
         $this->delete($this->tableName);
-
-        return true;
     }
 }

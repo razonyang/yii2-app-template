@@ -32,7 +32,5 @@ class m190724_031648_data_user extends Migration
     public function safeDown()
     {
         $this->delete(User::tableName(), ['username' => 'admin']);
-
-        return true;
     }
 }

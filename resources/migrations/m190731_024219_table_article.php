@@ -35,7 +35,5 @@ class m190731_024219_table_article extends Migration
     public function safeDown()
     {
         $this->dropTable($this->tableName);
-
-        return true;
     }
 }

@@ -144,7 +144,5 @@ class m190724_022733_auth_init extends Migration
     {
         $auth = Yii::$app->getAuthManager();
         $auth->removeAll();
-
-        return true;
     }
 }
