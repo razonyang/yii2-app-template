@@ -16,7 +16,7 @@ $this->title = Yii::t('app', 'Article');
   </div>
   <div class="media-body">
     <h4 class="media-heading">
-        <?= Html::a(Html::encode($article->summary), Url::to(['/article/view', 'id' => $article->id])) ?>
+        <?= Html::a(Html::encode($article->title), Url::to(['/article/view', 'id' => $article->id])) ?>
     </h4>
     <p><?= Html::encode($article->summary) ?></p>
     <small class="text-muted">
