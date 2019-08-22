@@ -19,10 +19,10 @@ class m190822_070404_data_article extends Migration
             'creator' => 1,
             'author' => 'Administrator',
             'category_id' => 1,
-            'summary' => 'Congratulation! You have set up Yii2 and Vue application.', 
+            'summary' => 'Congratulation! You have set up Yii2 and Vue application.',
             'cover' => '',
             'release_time' => $now,
-            'create_time' => $now, 
+            'create_time' => $now,
             'update_time' => $now,
         ]);
 
