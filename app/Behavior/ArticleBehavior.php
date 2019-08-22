@@ -42,7 +42,7 @@ class ArticleBehavior extends Behavior
 
         $meta = ArticleMetaFactory::findByArticleId($model->id);
         if ($meta && $meta->delete() === false) {
-           throw new \Exception('Unable to delete article meta');
+            throw new \Exception('Unable to delete article meta');
         }
     }
 }

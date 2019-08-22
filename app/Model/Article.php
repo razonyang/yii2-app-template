@@ -22,7 +22,7 @@ use yii\behaviors\OptimisticLockBehavior;
  * @property int $is_deleted Is Deleted
  * @property int $create_time Create Time
  * @property int $update_time Update Time
- * 
+ *
  * @property ArticleMeta $meta
  */
 class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterface

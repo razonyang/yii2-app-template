@@ -8,7 +8,7 @@ use Yii;
  *
  * @property int $article_id Article ID
  * @property string $content Content
- * 
+ *
  * @property Article $article
  */
 class ArticleMeta extends ActiveRecord
