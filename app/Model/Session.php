@@ -1,7 +1,7 @@
 <?php
 namespace App\Model;
 
-use App\Db\TimestampBehavior;
+use App\Behavior\TimestampBehavior;
 use Yii;
 
 /**

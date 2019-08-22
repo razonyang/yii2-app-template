@@ -88,6 +88,27 @@ class m190724_022733_auth_init extends Migration
                 'children' => ['articleIndex', 'articleCreate', 'articleUpdate', 'articleView', 'articleDelete'],
             ],
 
+            'articleCategoryIndex' => [
+                'description' => 'Article Category List',
+            ],
+            'articleCategoryCreate' => [
+                'description' => 'Create Article Category',
+            ],
+            'articleCategoryView' => [
+                'description' => 'View Article Category',
+            ],
+            'articleCategoryUpdate' => [
+                'description' => 'Edit Article Category',
+                'children' => ['articleView'],
+            ],
+            'articleCategoryDelete' => [
+                'description' => 'Delete Article Category',
+            ],
+            'articleCategoryManagement' => [
+                'description' => 'Article Category Management',
+                'children' => ['articleCategoryIndex', 'articleCategoryCreate', 'articleCategoryUpdate', 'articleCategoryView', 'articleCategoryDelete'],
+            ],
+
             'settingIndex' => [
                 'description' => 'Setting List',
             ],
@@ -121,7 +142,7 @@ class m190724_022733_auth_init extends Migration
         $roles = [
             'Administrator' => [
                 'description' => 'Administrator',
-                'permissions' => ['userManagement', 'roleManagement', 'articleManagement', 'settingManagement'],
+                'permissions' => ['userManagement', 'roleManagement', 'articleManagement', 'articleCategoryManagement', 'settingManagement'],
             ],
             'User' => [
                 'description' => 'User',

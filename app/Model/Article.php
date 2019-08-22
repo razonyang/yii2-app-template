@@ -2,8 +2,8 @@
 namespace App\Model;
 
 use App\Behavior\ArticleBehavior;
-use App\Db\TimestampBehavior;
-use App\Factory\ArticleMetaFactory;
+use App\Behavior\CreatorBehavior;
+use App\Behavior\TimestampBehavior;
 use App\Validator\UrlValidator;
 use Yii;
 use yii\behaviors\OptimisticLockBehavior;
@@ -12,7 +12,7 @@ use yii\behaviors\OptimisticLockBehavior;
  * This is the model class for table "{{%article}}".
  *
  * @property int $id
- * @property int $user_id User ID
+ * @property int $creator Creator ID
  * @property string $title Title
  * @property string $summary Description
  * @property string $author Author
@@ -24,6 +24,7 @@ use yii\behaviors\OptimisticLockBehavior;
  * @property int $update_time Update Time
  *
  * @property ArticleMeta $meta
+ * @property ArticleCategory $category
  */
 class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterface
 {
@@ -44,6 +45,7 @@ class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterfa
         return [
             TimestampBehavior::class,
             OptimisticLockBehavior::class,
+            CreatorBehavior::class,
             ArticleBehavior::class,
         ];
     }
@@ -60,11 +62,12 @@ class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterfa
     {
         return [
             [['author', 'cover'], 'default', 'value' => ''],
-            [['user_id', 'title', 'content', 'summary', 'status', 'release_time'], 'required'],
-            [['user_id', 'release_time', 'status', 'is_deleted', 'create_time', 'update_time'], 'integer'],
+            [['title', 'content', 'summary', 'status', 'release_time', 'category_id'], 'required'],
+            [['release_time', 'status', 'is_deleted', 'create_time', 'update_time', 'category_id'], 'integer'],
             [['content'], 'string'],
             [['title', 'author'], 'string', 'max' => 255],
             [['cover'], UrlValidator::class],
+            ['category_id', 'exist', 'targetClass' => ArticleCategory::class, 'targetAttribute' => 'id'],
         ];
     }
 
@@ -75,7 +78,7 @@ class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterfa
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'user_id' => Yii::t('app', 'User ID'),
+            'creator' => Yii::t('app', 'Creator'),
             'cover' => Yii::t('app', 'Cover'),
             'title' => Yii::t('app', 'Title'),
             'summary' => Yii::t('app', 'Summary'),
@@ -92,5 +95,10 @@ class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterfa
     public function getMeta()
     {
         return $this->hasOne(ArticleMeta::class, ['article_id' => 'id']);
+    }
+
+    public function getCategory()
+    {
+        return $this->hasOne(ArticleCategory::class, ['id' => 'category_id']);
     }
 }

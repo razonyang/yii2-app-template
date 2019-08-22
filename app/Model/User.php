@@ -1,7 +1,7 @@
 <?php
 namespace App\Model;
 
-use App\Db\TimestampBehavior;
+use App\Behavior\TimestampBehavior;
 use App\Http\Filter\LanguagePickerInterface;
 use App\Http\User\LogoutInterface;
 use Yii;

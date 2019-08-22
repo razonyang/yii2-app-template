@@ -28,6 +28,7 @@ return [
             // backend
             'api/backend/v1/user',
             'api/backend/v1/article',
+            'api/backend/v1/article-category',
 
             // Frontend
             'api/frontend/v1/article',

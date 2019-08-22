@@ -5,16 +5,15 @@ use App\Factory\ArticleMetaFactory;
 use App\Model\Article;
 use yii\base\Behavior;
 use yii\base\Event;
-use yii\db\ActiveRecord;
 
 class ArticleBehavior extends Behavior
 {
     public function events()
     {
         return [
-            ActiveRecord::EVENT_AFTER_INSERT => 'saveMeta',
-            ActiveRecord::EVENT_AFTER_UPDATE => 'saveMeta',
-            ActiveRecord::EVENT_AFTER_DELETE => 'afterDelete',
+            Article::EVENT_AFTER_INSERT => 'saveMeta',
+            Article::EVENT_AFTER_UPDATE => 'saveMeta',
+            Article::EVENT_AFTER_DELETE => 'afterDelete',
         ];
     }
 

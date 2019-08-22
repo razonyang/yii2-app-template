@@ -10,11 +10,17 @@ class Article extends BaseArticle
     {
         return [
             'id',
+            'category_id',
+            'category_name' => function ($model) {
+                return $model->category->name ?? '';
+            },
             'title',
             'author',
             'cover',
+            'status',
             'summary',
             'release_time',
+            'create_time',
             'update_time',
         ];
     }

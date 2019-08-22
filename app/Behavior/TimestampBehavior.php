@@ -1,5 +1,5 @@
 <?php
-namespace App\Db;
+namespace App\Behavior;
 
 use yii\behaviors\TimestampBehavior as Behavior;
 
