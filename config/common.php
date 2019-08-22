@@ -22,7 +22,7 @@ return [
     'runtimePath' => $root . '/runtime',
     'name' => 'Yii Application',
     'timezone' => 'Asia/Shanghai',
-    'language' => 'zh-CN',
+    'language' => 'en-US',
     'sourceLanguage' => 'en',
     'components' => [
         'cache' => [
