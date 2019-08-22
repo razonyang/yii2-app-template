@@ -17,10 +17,11 @@ $this->title = Yii::t('app', 'Article');
   <div class="media-body">
     <h4 class="media-heading">
         <?= Html::a(Html::encode($article->summary), Url::to(['/article/view', 'id' => $article->id])) ?>
-        <small class="text-muted"><?= Html::encode($article->author) ?></small>
     </h4>
     <p><?= Html::encode($article->summary) ?></p>
-    <small class="text-muted"><?= Yii::t('app', '{0, time}', $article->release_time) ?></small>
+    <small class="text-muted">
+      Created by <?= Html::encode($article->author) ?> and released at <?= Yii::$app->formatter->asDate($article->release_time) ?>
+    </small>
   </div>
 </div>
 

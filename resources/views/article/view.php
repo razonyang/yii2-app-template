@@ -14,7 +14,7 @@ $this->title = $model->title;
 <hr>
 
 <p class="text-muted">
-    Released by <?= Html::encode($model->author) ?> at <?= Yii::t('app', '{0, time}', $model->release_time) ?>
+    Created by <?= Html::encode($model->author) ?> and released at <?= Yii::$app->formatter->asDate($model->release_time) ?>
 </p>
 
 <?= $model->meta->content ?>
