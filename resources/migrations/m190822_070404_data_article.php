@@ -19,7 +19,7 @@ class m190822_070404_data_article extends Migration
             'creator' => 1,
             'author' => 'Administrator',
             'category_id' => 1,
-            'summary' => 'Congratulation! You have set up Yii2 and Vue application.',
+            'summary' => 'Congratulation! You have set up Yii2 and Vue application successfully.',
             'cover' => '',
             'release_time' => $now,
             'create_time' => $now,
@@ -28,7 +28,7 @@ class m190822_070404_data_article extends Migration
 
         $this->insert($this->metaTableName, [
             'article_id' => 1,
-            'content' => '<p><strong>Congratulation!</strong> You have set up Yii2 and Vue application.</p>',
+            'content' => '<p><strong>Congratulation!</strong> You have set up Yii2 and Vue application successfully.</p>',
         ]);
     }
 
