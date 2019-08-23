@@ -1,12 +1,18 @@
 <?php
+
+use App\Http\Asset\AppAsset;
 use App\Model\Article;
 use yii\bootstrap\Html;
 use yii\helpers\Url;
+use yii\web\View;
 use yii\widgets\LinkPager;
 
+/** @var View $this */
 /** @var Article[] $articles */
 $this->title = Yii::t('app', 'Article');
 $this->params['breadcrumbs'][] = $this->title;
+
+$this->registerCssFile('/css/article.css', ['depends' => [AppAsset::class]]);
 ?>
 
 <?php foreach ($articles as $article): ?>

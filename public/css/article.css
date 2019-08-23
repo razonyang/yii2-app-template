@@ -1,0 +1,15 @@
+.article {
+    margin: 20px 0;
+}
+
+.article img {
+    max-width: 120px;
+}
+
+.article .title {
+    
+}
+
+.article .summary {
+    margin: 10px 0;
+}
