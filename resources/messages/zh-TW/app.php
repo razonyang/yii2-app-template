@@ -6,6 +6,7 @@ return [
 
     'Console' => '控制臺',
     'Contact Us' => '聯系我們',
+    'Content' => '內容',
 
     'Description' => '描述',
 
@@ -28,7 +29,11 @@ return [
     
     'Real Name' => '真實姓名',
     'Role' => '角色',
+
+    'Subject' => '主題',
     
     'User' => '用戶',
     'Username' => '用戶名',
+
+    'Verification Code' => '驗證碼',
 ];
