@@ -2,6 +2,7 @@
 
 return [
     /* ============================== common ============================== */
+    'adminEmail' => 'admin@example.com',
     'supportEmail' => 'support@example.com',
 
     // user

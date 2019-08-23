@@ -2,7 +2,8 @@
 
 return [
     'GET /' => 'site/index',
-    'GET /contact' => 'site/contact',
+    'GET /captcha' => 'site/captcha',
+    'GET,POST /contact' => 'site/contact',
     'GET /about' => 'site/about',
     'GET /articles' => 'article/index',
     'GET /articles/<id:\d+>' => 'article/view',
