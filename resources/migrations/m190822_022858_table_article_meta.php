@@ -12,7 +12,7 @@ class m190822_022858_table_article_meta extends Migration
     {
         $this->createTable($this->tableName, [
             'article_id' => $this->integer()->notNull()->unique()->comment('Article ID'),
-            'content' => $this->text()->notNull()->defaultValue('')->comment('Content'),
+            'content' => $this->text()->notNull()->comment('Content'),
         ], $this->tableOptions());
     }
 
