@@ -5,6 +5,8 @@ return [
     'adminEmail' => 'admin@example.com',
     'supportEmail' => 'support@example.com',
 
+    'site.since' => 2008,
+
     // user
     'user.session.duration' => 7200, // session's duration in seconds, default to 2 hours.
     'user.session.refreshTokenDuration' => 403200, // refresh token's duration in seconds, default to a week.
