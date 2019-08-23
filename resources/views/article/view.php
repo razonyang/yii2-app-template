@@ -14,7 +14,8 @@ $this->title = $model->title;
 <hr>
 
 <p class="text-muted">
-    Created by <?= Html::encode($model->author) ?> and released at <?= Yii::$app->formatter->asDate($model->release_time) ?>
+    Created by <?= Html::encode($model->author) ?> and released at <?= Yii::$app->formatter->asDate($model->release_time) ?> 
+    <span class="glyphicon glyphicon-eye-open"></span> <?= $model->views ?>
 </p>
 
 <?= $model->meta->content ?>

@@ -8,6 +8,17 @@ use yii\web\NotFoundHttpException;
 
 class ArticleController extends Controller
 {
+    public function afterAction($action, $result)
+    {
+        if ($action->id === 'view') {
+            $this->model->updateCounters([
+                'views' => 1
+            ]);
+        }
+
+        return parent::afterAction($action, $result);
+    }
+
     public function actionIndex()
     {
         $query = Article::find()
@@ -42,6 +53,11 @@ class ArticleController extends Controller
         ]);
     }
 
+    /**
+     * @var Article $model
+     */
+    private $model;
+
     private function findModel($id)
     {
         $model = Article::findOne($id);
@@ -49,6 +65,7 @@ class ArticleController extends Controller
             throw new NotFoundHttpException('Article does not exists');
         }
 
-        return $model;
+        $this->model = $model;
+        return $this->model;
     }
 }
