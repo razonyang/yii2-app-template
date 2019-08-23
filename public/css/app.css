@@ -124,7 +124,7 @@ a.desc:after {
 }
 
 .article img {
-    width: 100px;
+    max-width: 120px;
 }
 
 .article .title {
