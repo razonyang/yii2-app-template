@@ -1,9 +1,12 @@
 <?php
 use App\Model\Article;
 use yii\bootstrap\Html;
+use yii\helpers\Url;
 
 /** @var Article $model */
-$this->title = $model->title;
+$this->title = Html::encode($model->title);
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Article'), 'url' => Url::to('/articles')];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <h1>

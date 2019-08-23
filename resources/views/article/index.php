@@ -6,6 +6,7 @@ use yii\widgets\LinkPager;
 
 /** @var Article[] $articles */
 $this->title = Yii::t('app', 'Article');
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <?php foreach ($articles as $article): ?>
