@@ -4,6 +4,7 @@ namespace App\Http\Controller;
 use App\Model\Article;
 use App\Model\StatusInterface;
 use yii\data\Pagination;
+use yii\helpers\HtmlPurifier;
 use yii\web\NotFoundHttpException;
 
 class ArticleController extends Controller
@@ -50,6 +51,7 @@ class ArticleController extends Controller
         
         return $this->render('view', [
             'model' => $model,
+            'content' => HtmlPurifier::process($model->meta->content),
         ]);
     }
 

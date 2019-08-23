@@ -18,4 +18,4 @@ $this->title = $model->title;
     <span class="glyphicon glyphicon-eye-open"></span> <?= $model->views ?>
 </p>
 
-<?= $model->meta->content ?>
+<?= $content ?>
