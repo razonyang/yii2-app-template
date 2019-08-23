@@ -8,7 +8,16 @@ use yii\rest\DeleteAction as Action;
 
 class DeleteAction extends Action
 {
+    use SafeActionTrait {
+        run as safeRun;
+    }
+
     public function run($id)
+    {
+        return $this->safeRun($id, [$this, 'delete']);
+    }
+
+    public function delete($id)
     {
         $model = $this->findModel($id);
 

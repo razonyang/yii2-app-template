@@ -11,8 +11,6 @@ use yii\rest\ActiveController as BaseActiveController;
 use yii\rest\IndexAction;
 use yii\rest\Action;
 use yii\web\ForbiddenHttpException;
-use yii\rest\UpdateAction;
-use yii\rest\CreateAction;
 use yii\rest\ViewAction;
 use yii\web\NotFoundHttpException;
 use Yii;
