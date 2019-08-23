@@ -60,7 +60,7 @@ return [
                 'host' => 'smtp.example.com',
                 'port' => 25,
                 'encryption' => 'ssl',
-                'username' => 'admin@example.com',
+                'username' => $params['adminEmail'],
                 'password' => '',
             ],
         ],
