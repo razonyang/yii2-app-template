@@ -7,7 +7,7 @@ use yii\bootstrap\Html;
 
 $urlManager = Yii::$app->getUrlManager();
 
-$this->title = 'Home';
+$this->title = Yii::t('app', 'Home');
 ?>
 <div class="site-index">
 
