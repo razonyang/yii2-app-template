@@ -2,11 +2,11 @@
     "name": "razonyang/yii2-app-template",
     "description": "Yii2 App Project Template",
     "keywords": ["yii2", "framework", "advanced", "project template"],
-    "homepage": "http://www.yiiframework.com/",
+    "homepage": "https://github.com/razonyang/yii2-app-template/issues",
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "issues": "https://github.com/razonyang/yii2-app-template/issues?state=open",
         "forum": "http://www.yiiframework.com/forum/",
         "wiki": "http://www.yiiframework.com/wiki/",
         "irc": "irc://irc.freenode.net/yii",
