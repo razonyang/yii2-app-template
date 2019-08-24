@@ -4,7 +4,7 @@ return [
         'db' => [
             'dsn' => 'mysql:host=db;dbname=yii',
             'username' => 'root',
-            'password' => '',
+            'password' => 'foobar',
             'enableSchemaCache' => false,
         ],
         'mailer' => [
@@ -21,7 +21,7 @@ return [
             'hostname' => 'redis',
             'port' => 6379,
             'database' => 0,
-            // 'password' => '',
+            'password' => 'foobar',
         ],
         'uploader' => [
             'host' => 'http://localhost:8080/resources',
