@@ -2,7 +2,7 @@
 return [
     'components' => [
         'db' => [
-            'dsn' => 'mysql:host=localhost;dbname=yii',
+            'dsn' => 'mysql:host=db;dbname=yii',
             'username' => 'root',
             'password' => '',
             'enableSchemaCache' => false,
@@ -18,7 +18,7 @@ return [
             ],
         ],
         'redis' => [
-            'hostname' => 'localhost',
+            'hostname' => 'redis',
             'port' => 6379,
             'database' => 0,
             // 'password' => '',
