@@ -40,7 +40,7 @@ class SessionRefreshForm extends UserForm
         $transaction = Yii::$app->getDb()->beginTransaction();
         try {
             // creates new session
-            $newSession = SessionFactory::createByRequest(
+            $newSession = SessionFactory::create(
                 $user->id,
                 Yii::$app->params['user.session.duration'],
                 Yii::$app->params['user.session.refreshTokenDuration'],

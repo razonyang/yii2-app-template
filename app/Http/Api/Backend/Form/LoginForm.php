@@ -18,7 +18,7 @@ class LoginForm extends BaseLoginForm
         try {
             $user = $this->getUser();
 
-            $session = SessionFactory::createByRequest(
+            $session = SessionFactory::create(
                 $user->id,
                 Yii::$app->params['user.session.duration'],
                 Yii::$app->params['user.session.refreshTokenDuration'],

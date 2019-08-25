@@ -18,7 +18,7 @@ class SessionFactory
      *
      * @return Session
      */
-    public static function createByRequest(int $userId, int $duration, int $refeshDuration, Request $request): Session
+    public static function create(int $userId, int $duration, int $refeshDuration, Request $request): Session
     {
         $ip = $request->getUserIP();
         $userAgent = mb_substr($request->getUserAgent(), 0, 255);
