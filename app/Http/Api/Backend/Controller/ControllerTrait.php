@@ -2,11 +2,10 @@
 namespace App\Http\Api\Backend\Controller;
 
 use App\Http\Filter\Auth\Authenticator;
-use App\Http\Filter\RateLimit\RateLimiter;
-use App\Http\Filter\RateLimit\Redis\RedisRateLimitFallbackUser;
+use RazonYang\Yii2\RateLimiter\Redis\RateLimiter;
 use Yii;
 use yii\filters\VerbFilter;
-use yii\filters\{Cors};
+use yii\filters\Cors;
 use yii\filters\auth\HttpBearerAuth;
 use yii\filters\auth\QueryParamAuth;
 
@@ -46,7 +45,7 @@ trait ControllerTrait
                 'actions' => $this->verbs(),
             ],
             'rateLimiter' => [
-                'class' => \RazonYang\Yii2\RateLimiter\Redis\RateLimiter::class,
+                'class' => RateLimiter::class,
                 'redis' => 'redis',
                 'capacity' => Yii::$app->params['api.rateLimiter.capacity'],
                 'rate' => Yii::$app->params['api.rateLimiter.rate'],
