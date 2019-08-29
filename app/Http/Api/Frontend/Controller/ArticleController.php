@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Api\Frontend\Controller;
 
+use App\Http\Api\Form\ArticleDislikeForm;
+use App\Http\Api\Form\ArticleLikeForm;
 use App\Http\Api\Model\Article;
 use App\Model\StatusInterface;
 use yii\base\DynamicModel;
@@ -45,5 +47,25 @@ class ArticleController extends ActiveController
                 $query->andWhere(['LIKE', 'a.' . $name, $model->$name]);
             }
         }
+    }
+
+    /**
+     * Likes an article.
+     */
+    public function actionLike($id)
+    {
+        $model = new ArticleLikeForm();
+        $model->load(['id' => $id], '');
+        return $model->handle();
+    }
+
+    /**
+     * Dislikes an article.
+     */
+    public function actionDislike($id)
+    {
+        $model = new ArticleDislikeForm();
+        $model->load(['id' => $id], '');
+        return $model->handle();
     }
 }

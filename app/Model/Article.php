@@ -25,6 +25,10 @@ use yii\behaviors\OptimisticLockBehavior;
  *
  * @property ArticleMeta $meta
  * @property ArticleCategory $category
+ * @property ArticleLike $like
+ * @property ArticleLike[] $likes
+ * @property int $likesCount
+ * @property bool $hasLiked
  */
 class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterface
 {
@@ -100,5 +104,26 @@ class Article extends ActiveRecord implements SoftDeleteInterface, StatusInterfa
     public function getCategory()
     {
         return $this->hasOne(ArticleCategory::class, ['id' => 'category_id']);
+    }
+
+    public function getLike()
+    {
+        return $this->hasOne(ArticleLike::class, ['article_id' => 'id'])
+            ->andWhere(['user_id' => (int) Yii::$app->getUser()->getId()]);
+    }
+
+    public function getHasLiked(): bool
+    {
+        return $this->like ? true : false;
+    }
+
+    public function getLikes()
+    {
+        return $this->hasMany(ArticleLike::class, ['article_id' => 'id']);
+    }
+
+    public function getLikesCount(): int
+    {
+        return $this->getLikes()->count();
     }
 }

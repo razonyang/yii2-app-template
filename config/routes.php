@@ -39,11 +39,9 @@ return [
             'api/backend/v1/user',
             'api/backend/v1/article',
             'api/backend/v1/article-category',
-
-            // Frontend
-            'api/frontend/v1/article',
         ],
     ],
+
     [
         'class' => \yii\rest\UrlRule::class,
         'controller' => [
@@ -54,6 +52,17 @@ return [
         ],
         'tokens' => [
             '{id}' => '<id:[\\w\-\.]+>',
+        ],
+    ],
+
+    [
+        'class' => \yii\rest\UrlRule::class,
+        'controller' => [
+            'api/frontend/v1/article',
+        ],
+        'extraPatterns' => [
+            'PUT {id}/likes' => 'like',
+            'DELETE {id}/likes' => 'dislike',
         ],
     ],
 ];

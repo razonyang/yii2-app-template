@@ -29,6 +29,7 @@ class Article extends BaseArticle
     {
         return [
             'version',
+            'likes_count',
             'content' => function ($model) {
                 return $model->meta->content ?? '';
             },
