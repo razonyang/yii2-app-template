@@ -33,6 +33,7 @@ return [
     'Role' => '角色',
 
     'Setting' => '设置',
+    'Sign Up' => '注册',
     'Subject' => '主题',
     
     'User' => '用户',

@@ -58,7 +58,7 @@ class User extends ActiveRecord implements
                 ],
                 'string'
             ],
-            ['status', 'default', 'value' => StatusInterface::STATUS_ACTIVE],
+            ['status', 'default', 'value' => StatusInterface::STATUS_INACTIVE],
             [['avatar', 'auth_key'], 'default', 'value' => ''],
             [['language'], 'default', 'value' => Yii::$app->language],
             [

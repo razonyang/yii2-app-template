@@ -33,6 +33,7 @@ return [
     'Role' => '角色',
 
     'Setting' => '設置',
+    'Sign Up' => '注冊',
     'Subject' => '主題',
     
     'User' => '用戶',
