@@ -15,7 +15,7 @@ class ArticleLikeForm extends BaseArticleLikeForm
         }
 
         // creates new like record
-        $like = ArticleLikeFactory::create($this->id, $this->getUser()->getId());
+        $like = ArticleLikeFactory::create((int) $this->id, (int) $this->getUser()->getId());
         if (!$like->save()) {
             $this->addErrors($like->getErrors());
         }
