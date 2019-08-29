@@ -18,3 +18,9 @@ coverage:
     include:
         - app/*
     exclude:
+        - app/Http/Controller/*
+        - app/Http/Api/Controller/*
+        - app/Http/Api/Backend/Controller/*
+        - app/Http/Api/Backend/Module/V1/Controller/*
+        - app/Http/Api/Frontend/Controller/*
+        - app/Http/Api/Frontend/Module/V1/Controller/*
