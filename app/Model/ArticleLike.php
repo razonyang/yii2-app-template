@@ -12,7 +12,7 @@ use Yii;
  * @property int $article_id Article ID
  * @property int $user_id User ID
  * @property int $create_time Create Time
- * 
+ *
  * @property Article $article
  * @property User $user
  */
