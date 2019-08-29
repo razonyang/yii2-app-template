@@ -42,6 +42,18 @@ AppAsset::register($this);
         ['label' => Yii::t('app', 'Contact Us'), 'url' => ['/site/contact']],
         ['label' => Yii::t('app', 'Console'), 'url' => Yii::$app->params['backend.url'], 'linkOptions' => ['target' => '_blank']],
     ];
+    if (Yii::$app->user->isGuest) {
+        $menuItems[] = ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']];
+    } else {
+        $menuItems[] = [
+            'label' => Yii::$app->user->identity->username,
+            'items' => [
+                ['label' => Yii::t('app', 'Setting'), 'url' => '#'],
+                '<li role="separator" class="divider"></li>',
+                ['label' => Yii::t('app', 'Logout'), 'url' => 'javascript: $("#logout-form").submit();'],
+            ],
+        ];
+    }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
@@ -69,6 +81,11 @@ AppAsset::register($this);
         </p>
     </div>
 </footer>
+
+<?php if (!Yii::$app->user->isGuest): ?>
+<?= Html::beginForm(['/logout'], 'post', ['id' => 'logout-form']) ?>
+<?= Html::endForm() ?>
+<?php endif; ?>
 
 <?php $this->endBody() ?>
 </body>

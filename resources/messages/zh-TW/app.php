@@ -17,6 +17,8 @@ return [
     'Home' => '主頁',
 
     'Last Name' => '姓氏',
+    'Login' => '登錄',
+    'Logout' => '注銷',
 
     'Name' => '名稱',
     'New Password' => '新密碼',
@@ -30,6 +32,7 @@ return [
     'Real Name' => '真實姓名',
     'Role' => '角色',
 
+    'Setting' => '設置',
     'Subject' => '主題',
     
     'User' => '用戶',

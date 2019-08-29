@@ -51,7 +51,7 @@ return [
         'user' => [
             'identityClass' => \App\Model\User::class,
             'enableAutoLogin' => false,
-            'enableSession' => false,
+            'enableSession' => true,
             'identityCookie' => ['name' => '_identity-web', 'httpOnly' => true],
         ],
         'log' => [

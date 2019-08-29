@@ -4,6 +4,8 @@ return [
     'GET /' => 'site/index',
     'GET /captcha' => 'site/captcha',
     'GET,POST /contact' => 'site/contact',
+    'GET,POST /login' => 'site/login',
+    'POST /logout' => 'site/logout',
     'GET /about' => 'site/about',
     'GET /articles' => 'article/index',
     'GET /articles/<id:\d+>' => 'article/view',
