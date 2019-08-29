@@ -15,7 +15,7 @@ use Yii;
  * @property int $is_deleted Is Deleted
  * @property int $create_time Create Time
  * @property int $update_time Update Time
- * 
+ *
  * @property Article $article
  * @property User $user
  */
