@@ -31,15 +31,15 @@ class ArticleCommentController extends ActiveController
 
     public function searchModel()
     {
-        return (new DynamicModel(['title' => '', 'author' => '', 'summary' => '']))
-            ->addRule(['title', 'author', 'summary'], 'string');
+        return (new DynamicModel(['article_id' => null]))
+            ->addRule(['article_id'], 'number');
     }
 
     protected function applyFilter($query, $model, $filter)
     {
-        foreach (['title', 'author', 'summary'] as $name) {
+        foreach (['article_id'] as $name) {
             if (!empty($model->$name)) {
-                $query->andWhere(['LIKE', 'a.' . $name, $model->$name]);
+                $query->andWhere(['a.' . $name => (int) $model->$name]);
             }
         }
     }
