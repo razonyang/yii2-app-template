@@ -4,6 +4,8 @@ $(document).ready(function() {
     var btnLike = $('#btn-like');
     var btnDislike = $('#btn-dislike');
 
+    $('#comment-items').load('/articles/1/comments');
+
     function updateLikesCounter(count) {
         likesCount.text(parseInt(likesCount.text()) + count);
     }

@@ -12,7 +12,7 @@ use yii\bootstrap\Html;
     </a>
   </div>
   <div class="media-body">
-    <h4 class="media-heading">Media heading</h4>
+    <h4 class="media-heading"><?= Html::encode($comment->user->name) ?></h4>
     <?= Html::encode($comment->content) ?>
   </div>
 </div>

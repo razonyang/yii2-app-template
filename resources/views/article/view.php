@@ -45,5 +45,10 @@ $this->registerJsFile(Yii::$app->getUrlManager()->createUrl('/js/article.js'), [
 
 <hr>
 
+<?= Html::beginForm(['/article/comments']) ?>
+<?= Html::textarea('content', '', ['class' => 'form-control']) ?>
+<?= Html::button('Submit', ['class' => 'btn btn-primary']) ?>
+<?= Html::endForm() ?>
+
 <div id="comment-items">
 </div>

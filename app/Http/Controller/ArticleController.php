@@ -2,6 +2,7 @@
 namespace App\Http\Controller;
 
 use App\Model\Article;
+use App\Model\ArticleComment;
 use App\Model\ArticleLike;
 use App\Model\StatusInterface;
 use yii\data\Pagination;
@@ -85,11 +86,19 @@ class ArticleController extends Controller
         return $this->model;
     }
 
-    public function actionComments($id)
+    public function actionComments($id, $page = 1, $limit = 10)
     {
-        $comments = ArticleComment::findAll([
-            'article_id' => $id,
-        ]);
+        $this->layout = false;
+        $comments = ArticleComment::find()
+            ->alias('c')
+            ->joinWith('user')
+            ->where([
+                'c.article_id' => $id,
+            ])
+            ->orderBy(['c.create_time' => SORT_DESC])
+            ->offset(($page - 1) * $limit)
+            ->all();
+        
         return $this->render('comments', [
             'comments' => $comments,
         ]);

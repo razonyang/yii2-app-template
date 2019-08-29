@@ -12,8 +12,10 @@ return [
     'GET /verify-email' => 'site/verify-email',
     'GET,POST /resend-verification-email' => 'site/resend-verification-email',
     'GET /about' => 'site/about',
+
     'GET /articles' => 'article/index',
     'GET /articles/<id:\d+>' => 'article/view',
+    'GET /articles/<id:\d+>/comments' => 'article/comments',
     
     // API
     [
