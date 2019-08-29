@@ -30,6 +30,7 @@ return [
     'Permission' => '权限',
     
     'Real Name' => '真实姓名',
+    'Reset Password' => '重置密码',
     'Role' => '角色',
 
     'Setting' => '设置',
