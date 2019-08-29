@@ -68,7 +68,7 @@ class ResendVerificationEmailForm extends Model
 
     private $user;
 
-    public function getUser():? User
+    public function getUser(): ?User
     {
         if ($this->user === null) {
             $this->user = User::findOne(['email' => $this->email]);
