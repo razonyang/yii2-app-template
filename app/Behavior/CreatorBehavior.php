@@ -2,6 +2,7 @@
 namespace App\Behavior;
 
 use Yii;
+use yii\base\ModelEvent;
 use yii\behaviors\AttributesBehavior;
 use yii\db\ActiveRecord;
 
@@ -15,7 +16,11 @@ class CreatorBehavior extends AttributesBehavior
 
         $this->attributes = [
             $this->creatorAttribute => [
-                ActiveRecord::EVENT_BEFORE_INSERT => Yii::$app->getUser()->getId(),
+                ActiveRecord::EVENT_BEFORE_VALIDATE => function (ModelEvent $event, $attribute) {
+                    /** @var \yii\db\ActiveRecord $model */
+                    $model = $event->sender;
+                    return $model->getIsNewRecord() ? Yii::$app->getUser()->getId() : $model->$attribute;
+                },
             ],
         ];
     }

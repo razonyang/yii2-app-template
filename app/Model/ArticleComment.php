@@ -2,6 +2,8 @@
 
 namespace App\Model;
 
+use App\Behavior\CreatorBehavior;
+use App\Behavior\TimestampBehavior;
 use Yii;
 
 /**
@@ -18,6 +20,7 @@ use Yii;
  *
  * @property Article $article
  * @property User $user
+ * @property string $username
  */
 class ArticleComment extends \App\Model\ActiveRecord
 {
@@ -79,5 +82,10 @@ class ArticleComment extends \App\Model\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(User::class, ['id' => 'user_id']);
+    }
+
+    public function getUsername()
+    {
+        return $this->user ? $this->user->name : '';
     }
 }

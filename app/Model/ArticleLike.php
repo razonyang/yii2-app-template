@@ -47,10 +47,9 @@ class ArticleLike extends ActiveRecord
     {
         return [
             [['article_id'], 'required'],
-            [['article_id', 'user_id', 'create_time'], 'integer'],
-            [['article_id', 'user_id'], 'unique', 'targetAttribute' => ['article_id', 'user_id']],
+            [['article_id', 'create_time'], 'integer'],
+            // [['article_id', 'user_id'], 'unique', 'targetAttribute' => ['article_id', 'user_id']],
             ['article_id', 'exist', 'targetClass' => Article::class, 'targetAttribute' => 'id'],
-            ['user_id', 'exist', 'targetClass' => User::class, 'targetAttribute' => 'id'],
         ];
     }
 
