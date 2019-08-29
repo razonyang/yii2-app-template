@@ -31,6 +31,8 @@ $this->registerCssFile('/css/article.css', ['depends' => [AppAsset::class]]);
 
     <small class="text-muted">
       Created by <?= Html::encode($article->author) ?> and released at <?= Yii::$app->formatter->asDate($article->release_time) ?>
+      <span class="glyphicon glyphicon-eye-open"></span> <?= $article->views ?> 
+      <span class="glyphicon glyphicon-heart"></span> <?= $likesCount[$article->id] ?? 0 ?> 
     </small>
   </div>
 </div>

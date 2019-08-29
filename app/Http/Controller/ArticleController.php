@@ -2,8 +2,10 @@
 namespace App\Http\Controller;
 
 use App\Model\Article;
+use App\Model\ArticleLike;
 use App\Model\StatusInterface;
 use yii\data\Pagination;
+use yii\helpers\ArrayHelper;
 use yii\helpers\HtmlPurifier;
 use yii\web\NotFoundHttpException;
 
@@ -38,9 +40,21 @@ class ArticleController extends Controller
         $articles = $query->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
+
+        $likes = ArticleLike::find()
+            ->select([
+                'article_id',
+                'count' => 'count(*)'
+            ])
+            ->where(['IN', 'article_id', array_column($articles, 'id')])
+            ->groupBy(['article_id'])
+            ->asArray()
+            ->all();
+        $likesCount = ArrayHelper::map($likes, 'article_id', 'count');
         
         return $this->render('index', [
             'articles' => $articles,
+            'likesCount' => $likesCount,
             'pagination' => $pagination,
         ]);
     }
