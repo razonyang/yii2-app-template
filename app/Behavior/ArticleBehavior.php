@@ -3,6 +3,7 @@ namespace App\Behavior;
 
 use App\Factory\ArticleMetaFactory;
 use App\Model\Article;
+use Yii;
 use yii\base\Behavior;
 use yii\base\Event;
 
