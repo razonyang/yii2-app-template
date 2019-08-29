@@ -6,7 +6,7 @@ use Yii;
 
 class ArticleMetaFactory
 {
-    public static function findByArticleId($articleId): ?ArticleMeta
+    public static function findByArticleId(int $articleId): ?ArticleMeta
     {
         return ArticleMeta::findOne([
             'article_id' => $articleId,
