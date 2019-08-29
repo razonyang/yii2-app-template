@@ -39,6 +39,9 @@ return [
             'api/backend/v1/user',
             'api/backend/v1/article',
             'api/backend/v1/article-category',
+
+            // frontend
+            'api/frontend/v1/article-comment',
         ],
     ],
 
