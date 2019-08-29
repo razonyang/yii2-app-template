@@ -84,4 +84,14 @@ class ArticleController extends Controller
         $this->model = $model;
         return $this->model;
     }
+
+    public function actionComments($id)
+    {
+        $comments = ArticleComment::findAll([
+            'article_id' => $id,
+        ]);
+        return $this->render('comments', [
+            'comments' => $comments,
+        ]);
+    }
 }

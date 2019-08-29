@@ -42,3 +42,8 @@ $this->registerJsFile(Yii::$app->getUrlManager()->createUrl('/js/article.js'), [
 </p>
 
 <?= $content ?>
+
+<hr>
+
+<div id="comment-items">
+</div>
