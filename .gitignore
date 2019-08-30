@@ -43,3 +43,7 @@ phpunit.phar
 # docker
 /.env
 /docker-compose.yml
+
+# vim
+tags
+.tags
