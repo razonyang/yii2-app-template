@@ -108,10 +108,11 @@ return [
         'uploader' => [
             'class' => \RazonYang\Yii2\Uploader\Uploader::class,
             'host' => 'http://localhost/resources',
-            'filesystem' => [
-                'class' => \creocoder\flysystem\LocalFilesystem::class,
-                'path' => '@webroot/resources',
-            ],
+            'filesystem' => 'filesystem',
+        ],
+        'filesystem' => [
+            'class' => \creocoder\flysystem\LocalFilesystem::class,
+            'path' => '@webroot/resources',
         ],
     ],
     'params' => $params,
