@@ -64,7 +64,7 @@ public/                          contains the entry script and web resources
 resources
     environments/                contains environment-based overrides
     mail/                        contains view files for e-mails
-    messages/                    contains I18N emssages
+    messages/                    contains I18N messages
     migrations/                  contains database migrations
     views/                       contains view files for the Web application
 tests/                           contains tests    
