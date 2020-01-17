@@ -21,8 +21,8 @@ There is a [Yii2 Vue Admin](https://github.com/razonyang/yii2-vue-admin) for bui
 DEMO
 ----
 
-- Yii2 front end and API - https://yii.razon.xyz
-- Yii2 Vue Admin - https://admin.yii.razon.xyz
+- Yii2 front end and API - https://yii.errlogs.com
+- Yii2 Vue Admin - https://admin.yii.errlogs.com
 
 DOCUMENTATION
 -------------
