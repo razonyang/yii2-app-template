@@ -1,7 +1,7 @@
 <?php
 namespace App\Form;
 
-trait FormTrait 
+trait FormTrait
 {
     /**
      * @return self|mixed return model itself if has errors, otherwise returns handled's result.
