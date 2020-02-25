@@ -1,10 +1,10 @@
 <?php
 namespace App\Http\Api\Form;
 
-use App\Form\Form;
+use App\Form\BaseForm;
 use App\Model\ArticleLike;
 
-abstract class BaseArticleLikeForm extends Form
+abstract class BaseArticleLikeForm extends BaseForm
 {
     use UserTrait;
 

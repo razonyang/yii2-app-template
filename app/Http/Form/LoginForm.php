@@ -1,14 +1,14 @@
 <?php
 namespace App\Http\Form;
 
-use App\Form\Form;
+use App\Form\BaseForm;
 use App\Model\User;
 use Yii;
 
 /**
  * Login form
  */
-class LoginForm extends Form
+class LoginForm extends BaseForm
 {
     public $username;
     public $password;

@@ -1,12 +1,12 @@
 <?php
 namespace App\Http\Api\Backend\Form;
 
-use App\Form\Form;
+use App\Form\BaseForm;
 use App\Htpp\User\LogoutInterface;
 use Yii;
 use yii\web\IdentityInterface;
 
-class LogoutForm extends Form
+class LogoutForm extends BaseForm
 {
     protected function handleInternal()
     {

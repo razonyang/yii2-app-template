@@ -1,11 +1,11 @@
 <?php
 namespace App\Http\Api\Backend\Form;
 
-use App\Form\Form;
+use App\Form\BaseForm;
 use App\Model\User;
 use Yii;
 
-abstract class UserForm extends Form
+abstract class UserForm extends BaseForm
 {
     private $user;
 
