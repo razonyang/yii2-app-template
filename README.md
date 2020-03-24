@@ -22,7 +22,7 @@ DEMO
 ----
 
 - Yii2 front end and API - https://yii2.razonyang.com
-- Yii2 Vue Admin - https://admin.yii2.razonyang.com
+- Yii2 Vue Admin - https://yii2-admin.razonyang.com
 
 DOCUMENTATION
 -------------
