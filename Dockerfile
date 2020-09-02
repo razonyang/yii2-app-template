@@ -11,3 +11,5 @@ RUN git config --global url."git@github.com:".insteadOf "https://github.com/"
 RUN composer install --prefer-dist --no-dev --optimize-autoloader
 
 RUN /app/bin/init --env=DockerEnv --overwrite=No
+
+RUN chown -R www-data:www-data /app/runtime
