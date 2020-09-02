@@ -65,6 +65,24 @@ return [
             'config/web-local.php',
         ],
     ],
+    'DockerEnv' => [
+        'path' => 'dockerenv',
+        'createDirectory' => [
+            'public/assets',
+            'runtime/logs',
+        ],
+        'setWritable' => [
+            'public/assets',
+            'runtime',
+        ],
+        'setExecutable' => [
+            'bin/yii',
+            'bin/yii_test',
+        ],
+        'setCookieValidationKey' => [
+            'config/web-local.php',
+        ],
+    ],
     'Production' => [
         'path' => 'prod',
         'createDirectory' => [
