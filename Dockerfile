@@ -4,7 +4,7 @@ ENV APACHE_DOCUMENT_ROOT /app/public
 
 RUN sed -ri -e 's!/app/web!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 
-COPY . /app
+COPY --chown=www-data:www-data . /app
 
 RUN git config --global url."git@github.com:".insteadOf "https://github.com/"
 
